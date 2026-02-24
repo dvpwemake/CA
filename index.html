@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convergence Agon — Where Every Form of Intelligence Competes, Converges & Flourishes</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="The Convergence Agon is the world's first biennial Olympic-scale mega-event uniting humans, artificial intelligences, and robots in direct, fair, and spectacular competition. ConvergenceAgon.org" />
+  <meta name="keywords" content="Convergence Agon, AI competition, human AI robot competition, multi-being competition, AI Olympics, intelligence competition, AI benchmarking, robotics competition, ConvergenceAgon" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Convergence Agon Foundation" />
+  <link rel="canonical" href="https://convergenceagon.org/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://convergenceagon.org/" />
+  <meta property="og:title" content="Convergence Agon — Where Every Form of Intelligence Competes" />
+  <meta property="og:description" content="The world's first biennial mega-event uniting humans, AIs, and robots in fair, spectacular competition. The foundational institution of the intelligence age." />
+  <meta property="og:image" content="https://convergenceagon.org/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Convergence Agon — Intelligence Competes" />
+  <meta name="twitter:description" content="Humans. AIs. Robots. One arena. One mission. ConvergenceAgon.org" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Convergence Agon",
+    "url": "https://convergenceagon.org",
+    "description": "The world's first biennial Olympic-scale mega-event uniting humans, artificial intelligences, and robots in direct, fair, and spectacular competition.",
+    "foundingDate": "2026",
+    "slogan": "Where Every Form of Intelligence Competes, Converges, and Flourishes",
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Barlow+Condensed:wght@200;300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --white: #ffffff;
+      --black: #0a0a0a;
+      --red: #d90429;
+      --blue: #023e8a;
+      --mid-grey: #888;
+      --light-grey: #f4f4f4;
+      --border: rgba(0,0,0,0.08);
+      --gap: clamp(60px, 8vw, 120px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--white);
+      color: var(--black);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: var(--white); }
+    ::-webkit-scrollbar-thumb { background: var(--black); }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 48px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: padding 0.4s ease;
+    }
+    nav.scrolled { padding: 14px 48px; }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .nav-logo-mark {
+      width: 36px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    .nav-wordmark {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: 0.95rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+    .nav-wordmark strong { font-weight: 600; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 400;
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--black); }
+
+    .nav-cta {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--white) !important;
+      background: var(--black);
+      padding: 10px 24px;
+      text-decoration: none;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--red) !important; color: var(--white) !important; }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 48px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle grid background */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 40%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 40%, transparent 100%);
+    }
+
+    /* ── INFINITY LOGO SVG ANIMATED ── */
+    .hero-logo-wrap {
+      position: relative;
+      width: 220px;
+      height: 120px;
+      margin: 0 auto 48px;
+      animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) both;
+    }
+
+    .infinity-svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    /* The infinity path drawn with stroke animation */
+    .inf-stroke {
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .inf-dark {
+      stroke: var(--black);
+      stroke-width: 14;
+      stroke-dasharray: 800;
+      stroke-dashoffset: 800;
+      animation: drawInf 2s cubic-bezier(0.4,0,0.2,1) 0.3s forwards;
+    }
+
+    .inf-red {
+      stroke: var(--red);
+      stroke-width: 3;
+      stroke-dasharray: 800;
+      stroke-dashoffset: 800;
+      animation: drawInf 2s cubic-bezier(0.4,0,0.2,1) 0.7s forwards;
+      opacity: 0.7;
+    }
+
+    .inf-blue {
+      stroke: var(--blue);
+      stroke-width: 3;
+      stroke-dasharray: 800;
+      stroke-dashoffset: -800;
+      animation: drawInfRev 2s cubic-bezier(0.4,0,0.2,1) 0.9s forwards;
+      opacity: 0.5;
+    }
+
+    @keyframes drawInf {
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes drawInfRev {
+      to { stroke-dashoffset: 0; }
+    }
+
+    /* Pulsing glow dot at center */
+    .inf-center-dot {
+      cx: 110; cy: 60;
+      r: 4;
+      fill: var(--red);
+      animation: pulseDot 2s ease-in-out 2.5s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { r: 4; opacity: 1; }
+      50% { r: 8; opacity: 0.3; }
+    }
+
+    /* Rotating orbit marker */
+    .inf-marker {
+      fill: var(--blue);
+      animation: orbitInf 5s linear 2.5s infinite;
+      opacity: 0;
+    }
+    @keyframes orbitInf {
+      0% { opacity: 1; }
+      100% { opacity: 1; }
+    }
+
+    .hero-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+      margin-bottom: 20px;
+      animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 0.2s both;
+    }
+
+    h1.hero-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2.6rem, 6vw, 5.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      color: var(--black);
+      max-width: 900px;
+      margin: 0 auto 32px;
+      animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 0.35s both;
+    }
+
+    h1.hero-headline em {
+      font-style: italic;
+      color: var(--red);
+    }
+
+    .hero-sub {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: var(--mid-grey);
+      max-width: 600px;
+      margin: 0 auto 52px;
+      line-height: 1.65;
+      animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 0.5s both;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 0.65s both;
+    }
+
+    .btn-primary {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      background: var(--black);
+      color: var(--white);
+      border: 2px solid var(--black);
+      text-decoration: none;
+      transition: background 0.25s, color 0.25s;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--red); border-color: var(--red); }
+
+    .btn-secondary {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 400;
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      background: transparent;
+      color: var(--black);
+      border: 2px solid rgba(0,0,0,0.2);
+      text-decoration: none;
+      transition: border-color 0.25s, color 0.25s;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .btn-secondary:hover { border-color: var(--black); }
+
+    .hero-scroll-hint {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 1.2s both;
+    }
+    .hero-scroll-hint span {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #bbb;
+    }
+    .scroll-line {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, #bbb, transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.4; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.1); }
+    }
+
+    /* ── TICKER / MARQUEE ── */
+    .ticker-wrap {
+      background: var(--black);
+      color: var(--white);
+      overflow: hidden;
+      padding: 12px 0;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .ticker-inner {
+      display: flex;
+      white-space: nowrap;
+      animation: ticker 30s linear infinite;
+    }
+    .ticker-item {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0 48px;
+      opacity: 0.6;
+    }
+    .ticker-item.red { color: var(--red); opacity: 1; }
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      padding: var(--gap) 48px;
+      position: relative;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+      display: block;
+      margin-bottom: 24px;
+    }
+
+    h2.section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.1;
+      color: var(--black);
+      margin-bottom: 28px;
+    }
+
+    h2.section-title em { font-style: italic; color: var(--red); }
+
+    .section-body {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #444;
+      max-width: 680px;
+    }
+
+    /* ── WHAT IS THE AGON ── */
+    #what {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+
+    .what-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .what-visual {
+      position: relative;
+    }
+
+    .thesis-block {
+      background: var(--black);
+      color: var(--white);
+      padding: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .thesis-block::before {
+      content: 'ΑΓΏΝ';
+      position: absolute;
+      top: -20px;
+      right: 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 7rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.04);
+      letter-spacing: -0.02em;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .thesis-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 1.5;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .thesis-attr {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .thesis-block .red-accent {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--red);
+    }
+
+    /* ── COMPETITORS ── */
+    #competitors {
+      background: var(--light-grey);
+      border-top: 1px solid var(--border);
+    }
+
+    .competitors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 64px;
+    }
+
+    .competitor-card {
+      background: var(--white);
+      padding: 56px 40px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
+    }
+    .competitor-card:hover { transform: translateY(-6px); }
+
+    .competitor-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--accent, var(--black));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
+    }
+    .competitor-card:hover::after { transform: scaleX(1); }
+
+    .competitor-card.human { --accent: var(--blue); }
+    .competitor-card.ai { --accent: var(--red); }
+    .competitor-card.robot { --accent: #222; }
+
+    .competitor-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      font-weight: 300;
+      color: rgba(0,0,0,0.06);
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .competitor-glyph {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 28px;
+    }
+
+    .competitor-type {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent, var(--black));
+      margin-bottom: 12px;
+    }
+
+    .competitor-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 300;
+      margin-bottom: 20px;
+      line-height: 1.15;
+    }
+
+    .competitor-desc {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #666;
+    }
+
+    /* ── GAMES ── */
+    #games {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+
+    .games-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 64px;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .game-tile {
+      background: var(--white);
+      padding: 32px 28px;
+      position: relative;
+      cursor: default;
+      transition: background 0.25s;
+    }
+    .game-tile:hover { background: var(--black); }
+    .game-tile:hover .game-title,
+    .game-tile:hover .game-desc { color: var(--white); }
+    .game-tile:hover .game-num { color: rgba(255,255,255,0.12); }
+    .game-tile:hover .game-cat { color: var(--red); }
+
+    .game-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: rgba(0,0,0,0.06);
+      line-height: 1;
+      margin-bottom: 20px;
+      transition: color 0.25s;
+    }
+
+    .game-cat {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+      margin-bottom: 8px;
+      transition: color 0.25s;
+    }
+
+    .game-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: 0.04em;
+      color: var(--black);
+      transition: color 0.25s;
+      margin-bottom: 8px;
+    }
+
+    .game-desc {
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: #888;
+      line-height: 1.55;
+      transition: color 0.25s;
+    }
+
+    /* ── FAIRNESS SYSTEM ── */
+    #fairness {
+      background: var(--black);
+      color: var(--white);
+      border-top: none;
+    }
+
+    #fairness .section-label { color: rgba(255,255,255,0.35); }
+    #fairness h2.section-title { color: var(--white); }
+    #fairness h2.section-title em { color: var(--red); }
+    #fairness .section-body { color: rgba(255,255,255,0.55); }
+
+    .fairness-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 64px;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .pillar {
+      background: var(--black);
+      padding: 48px 36px;
+      border-left: 3px solid transparent;
+      transition: border-color 0.3s;
+    }
+    .pillar:hover { border-color: var(--red); }
+
+    .pillar-letter {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.08);
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .pillar-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 12px;
+    }
+
+    .pillar-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .pillar-body {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.45);
+    }
+
+    /* ── IMPACT ── */
+    #impact {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+
+    .impact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 56px;
+    }
+
+    .stat-item {}
+
+    .stat-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 300;
+      line-height: 1;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+    .stat-value span { color: var(--red); }
+
+    .stat-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+      line-height: 1.4;
+    }
+
+    .stat-divider {
+      width: 32px;
+      height: 1px;
+      background: var(--red);
+      margin: 12px 0;
+    }
+
+    .impact-milestones {
+      margin-top: 56px;
+    }
+
+    .milestone {
+      display: flex;
+      gap: 24px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .milestone:last-child { border-bottom: none; }
+
+    .milestone-year {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: var(--red);
+      min-width: 60px;
+      padding-top: 2px;
+    }
+
+    .milestone-text {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* ── PILLARS ── */
+    #brand {
+      background: var(--light-grey);
+      border-top: 1px solid var(--border);
+    }
+
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1px;
+      margin-top: 64px;
+    }
+
+    .brand-pillar {
+      background: var(--white);
+      padding: 36px 20px;
+      text-align: center;
+      transition: background 0.25s;
+      cursor: default;
+    }
+    .brand-pillar:hover { background: var(--black); }
+    .brand-pillar:hover .bp-word { color: var(--white); }
+    .brand-pillar:hover .bp-icon { color: var(--red); }
+
+    .bp-icon {
+      font-size: 1.4rem;
+      color: var(--black);
+      margin-bottom: 16px;
+      transition: color 0.25s;
+      display: block;
+    }
+
+    .bp-word {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--black);
+      transition: color 0.25s;
+    }
+
+    /* ── GOVERNANCE ── */
+    #governance {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+
+    .gov-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    .entity-card {
+      padding: 48px;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .entity-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--accent-e, var(--black));
+    }
+
+    .entity-card.foundation { --accent-e: var(--blue); }
+    .entity-card.operating { --accent-e: var(--red); }
+
+    .entity-type {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent-e, var(--black));
+      margin-bottom: 16px;
+    }
+
+    .entity-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 300;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .entity-body {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #666;
+    }
+
+    .entity-list {
+      list-style: none;
+      margin-top: 20px;
+    }
+    .entity-list li {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: #666;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .entity-list li::before {
+      content: '';
+      width: 6px;
+      height: 1px;
+      background: var(--accent-e, var(--black));
+      flex-shrink: 0;
+    }
+
+    /* ── FINANCIAL ── */
+    #financial {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    #financial .section-label { color: rgba(255,255,255,0.35); }
+    #financial h2.section-title { color: var(--white); }
+    #financial h2.section-title em { color: var(--red); }
+
+    .fin-bars {
+      margin-top: 64px;
+      display: grid;
+      gap: 20px;
+    }
+
+    .fin-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .fin-bar-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      min-width: 60px;
+      text-align: right;
+    }
+
+    .fin-bar-track {
+      flex: 1;
+      height: 2px;
+      background: rgba(255,255,255,0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fin-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--red), rgba(217,4,41,0.3));
+      width: 0;
+      transition: width 1.5s cubic-bezier(0.4,0,0.2,1);
+    }
+    .fin-bar-fill.animated { width: var(--target-w, 0%); }
+
+    .fin-bar-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: var(--white);
+      min-width: 90px;
+    }
+
+    .fin-highlight {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 48px;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .fin-block {
+      background: var(--black);
+      padding: 40px 32px;
+    }
+
+    .fin-big {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .fin-big span { color: var(--red); }
+
+    .fin-desc {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.6;
+    }
+
+    /* ── CTA ── */
+    #cta {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .cta-infinity {
+      width: 120px;
+      height: 65px;
+      margin: 0 auto 48px;
+      animation: floatInf 4s ease-in-out infinite;
+    }
+
+    @keyframes floatInf {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .cta-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--black);
+      margin-bottom: 24px;
+    }
+    .cta-headline em { font-style: italic; color: var(--red); }
+
+    .cta-sub {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      color: var(--mid-grey);
+      max-width: 500px;
+      margin: 0 auto 48px;
+      line-height: 1.7;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+    }
+
+    .cta-domain {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #bbb;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black);
+      color: rgba(255,255,255,0.35);
+      padding: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .footer-wordmark {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+    .footer-wordmark strong { font-weight: 600; color: var(--white); }
+
+    .footer-copy {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.25);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .footer-links a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      section { padding: var(--gap) 24px; }
+      .what-layout,
+      .impact-layout,
+      .gov-layout { grid-template-columns: 1fr; gap: 40px; }
+      .competitors-grid { grid-template-columns: 1fr; }
+      .games-grid { grid-template-columns: repeat(2, 1fr); }
+      .fairness-pillars { grid-template-columns: 1fr; }
+      .brand-grid { grid-template-columns: repeat(3, 1fr); }
+      .fin-highlight { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: 1fr 1fr; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+
+    @media (max-width: 600px) {
+      h1.hero-headline { font-size: 2.2rem; }
+      .games-grid { grid-template-columns: 1fr; }
+      .brand-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav id="main-nav" aria-label="Main navigation">
+  <a href="#" class="nav-logo" aria-label="Convergence Agon Home">
+    <!-- Inline mini infinity -->
+    <svg class="nav-logo-mark" viewBox="0 0 72 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M36 20 C36 20 28 6 16 6 C8 6 2 12 2 20 C2 28 8 34 16 34 C28 34 36 20 36 20 Z" stroke="#0a0a0a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <path d="M36 20 C36 20 44 6 56 6 C64 6 70 12 70 20 C70 28 64 34 56 34 C44 34 36 20 36 20 Z" stroke="#d90429" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <circle cx="36" cy="20" r="2.5" fill="#0a0a0a"/>
+    </svg>
+    <span class="nav-wordmark"><strong>Convergence</strong> Agon</span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#what">Vision</a></li>
+    <li><a href="#competitors">Competitors</a></li>
+    <li><a href="#games">Games</a></li>
+    <li><a href="#fairness">Fairness</a></li>
+    <li><a href="#financial">Invest</a></li>
+    <li><a href="#cta" class="nav-cta">Join the Agon</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero" aria-label="Hero">
+  <!-- Animated Infinity Logo -->
+  <div class="hero-logo-wrap" role="img" aria-label="Convergence Agon infinity symbol">
+    <svg class="infinity-svg" viewBox="0 0 220 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="glow-r">
+          <feGaussianBlur stdDeviation="4" result="blur"/>
+          <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+        </filter>
+        <filter id="glow-b">
+          <feGaussianBlur stdDeviation="3" result="blur"/>
+          <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+        </filter>
+      </defs>
+
+      <!-- Main dark infinity stroke -->
+      <path class="inf-stroke inf-dark"
+        d="M110 60
+           C110 60 88 18 58 18
+           C32 18 10 36 10 60
+           C10 84 32 102 58 102
+           C88 102 110 60 110 60
+           C110 60 132 18 162 18
+           C188 18 210 36 210 60
+           C210 84 188 102 162 102
+           C132 102 110 60 110 60 Z"/>
+
+      <!-- Red accent layer -->
+      <path class="inf-stroke inf-red" filter="url(#glow-r)"
+        d="M110 60
+           C110 60 88 18 58 18
+           C32 18 10 36 10 60
+           C10 84 32 102 58 102
+           C88 102 110 60 110 60"
+        stroke-dasharray="15 8"/>
+
+      <!-- Blue accent layer reverse -->
+      <path class="inf-stroke inf-blue" filter="url(#glow-b)"
+        d="M110 60
+           C110 60 132 18 162 18
+           C188 18 210 36 210 60
+           C210 84 188 102 162 102
+           C132 102 110 60 110 60"
+        stroke-dasharray="15 8"/>
+
+      <!-- Center pulse dot -->
+      <circle class="inf-center-dot" cx="110" cy="60" r="4"/>
+
+      <!-- Animated orbit dots -->
+      <circle r="4" fill="#023e8a" opacity="0.7">
+        <animateMotion dur="5s" repeatCount="indefinite" begin="2.5s">
+          <mpath href="#inf-path-anim"/>
+        </animateMotion>
+      </circle>
+      <circle r="3" fill="#d90429" opacity="0.7">
+        <animateMotion dur="5s" repeatCount="indefinite" begin="5s">
+          <mpath href="#inf-path-anim"/>
+        </animateMotion>
+      </circle>
+
+      <!-- Hidden path for animateMotion -->
+      <path id="inf-path-anim" d="M110 60 C110 60 88 18 58 18 C32 18 10 36 10 60 C10 84 32 102 58 102 C88 102 110 60 110 60 C110 60 132 18 162 18 C188 18 210 36 210 60 C210 84 188 102 162 102 C132 102 110 60 110 60 Z" fill="none" stroke="none"/>
+    </svg>
+  </div>
+
+  <p class="hero-eyebrow">Est. 2026 · ConvergenceAgon.org</p>
+
+  <h1 class="hero-headline">
+    Where Every Form of Intelligence<br>
+    <em>Competes, Converges &amp; Flourishes</em>
+  </h1>
+
+  <p class="hero-sub">
+    The world's first biennial Olympic-scale mega-event uniting humans, artificial intelligences, and autonomous robots in direct, fair, and spectacular competition — the foundational institution of the intelligence age.
+  </p>
+
+  <div class="hero-actions">
+    <a href="#cta" class="btn-primary">Join the Agon</a>
+    <a href="#what" class="btn-secondary">Discover the Vision</a>
+  </div>
+
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ── TICKER ── -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-inner">
+    <span class="ticker-item red">∞ Convergence Agon</span>
+    <span class="ticker-item">Human Intelligence</span>
+    <span class="ticker-item">· Artificial Intelligence ·</span>
+    <span class="ticker-item">Robotic Intelligence</span>
+    <span class="ticker-item red">∞ One Arena</span>
+    <span class="ticker-item">Tri-Modal Fairness</span>
+    <span class="ticker-item">· Optimism · Safety · Excellence ·</span>
+    <span class="ticker-item">Biennial World Finals</span>
+    <span class="ticker-item red">∞ 250M Viewers by 2031</span>
+    <span class="ticker-item">12 Original Games</span>
+    <span class="ticker-item">· ConvergenceAgon.org ·</span>
+    <!-- Duplicate for seamless loop -->
+    <span class="ticker-item red">∞ Convergence Agon</span>
+    <span class="ticker-item">Human Intelligence</span>
+    <span class="ticker-item">· Artificial Intelligence ·</span>
+    <span class="ticker-item">Robotic Intelligence</span>
+    <span class="ticker-item red">∞ One Arena</span>
+    <span class="ticker-item">Tri-Modal Fairness</span>
+    <span class="ticker-item">· Optimism · Safety · Excellence ·</span>
+    <span class="ticker-item">Biennial World Finals</span>
+    <span class="ticker-item red">∞ 250M Viewers by 2031</span>
+    <span class="ticker-item">12 Original Games</span>
+    <span class="ticker-item">· ConvergenceAgon.org ·</span>
+  </div>
+</div>
+
+<!-- ── WHAT IS THE AGON ── -->
+<section id="what">
+  <div class="container">
+    <div class="what-layout">
+      <div class="what-text">
+        <span class="section-label reveal">01 — The Vision</span>
+        <h2 class="section-title reveal reveal-delay-1">
+          The Ancient Agōn,<br><em>Reborn for the Age of AI</em>
+        </h2>
+        <p class="section-body reveal reveal-delay-2">
+          Modeled on the grandeur of the ancient Greek <em>agōn</em> (ἀγών) — civilization's original contest for excellence — the Convergence Agon is engineered for the convergence era of the 21st century. Competition, properly structured, is not adversarial. It is civilization's oldest mechanism for building respect, establishing shared norms, and producing excellence.
+        </p>
+        <p class="section-body reveal reveal-delay-3" style="margin-top:20px;">
+          The Agon extends this tradition to every form of intelligence — biological, digital, and embodied — creating the arena in which humans and AI first truly learn to see each other not as threats or tools, but as fellow contestants in the greatest game: building a flourishing future for every mind that inhabits it.
+        </p>
+      </div>
+
+      <div class="what-visual reveal reveal-delay-2">
+        <div class="thesis-block">
+          <div class="red-accent"></div>
+          <p class="thesis-quote">"Let us compete together, openly, joyfully, and under rules we collectively design."</p>
+          <span class="thesis-attr">The Convergence Agon Civilizational Thesis · 2026</span>
+        </div>
+
+        <!-- Seven purposes -->
+        <div style="margin-top:2px; background:#f4f4f4; padding:36px 48px;">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:300;font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#888;display:block;margin-bottom:20px;">Seven Strategic Purposes</span>
+          <ol style="list-style:none;display:grid;gap:10px;">
+            <li style="font-family:'Barlow',sans-serif;font-size:0.85rem;font-weight:300;color:#444;display:flex;gap:12px;"><span style="color:#d90429;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.72rem;min-width:20px;">I</span>Celebrate excellence across all forms of intelligence</li>
+            <li style="font-family:'Barlow',sans-serif;font-size:0.85rem;font-weight:300;color:#444;display:flex;gap:12px;"><span style="color:#d90429;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.72rem;min-width:20px;">II</span>Accelerate safe and ethical AI innovation</li>
+            <li style="font-family:'Barlow',sans-serif;font-size:0.85rem;font-weight:300;color:#444;display:flex;gap:12px;"><span style="color:#d90429;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.72rem;min-width:20px;">III</span>Real-world governance sandbox for multi-being coexistence</li>
+            <li style="font-family:'Barlow',sans-serif;font-size:0.85rem;font-weight:300;color:#444;display:flex;gap:12px;"><span style="color:#d90429;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.72rem;min-width:20px;">IV</span>Foster global cultural diplomacy</li>
+            <li style="font-family:'Barlow',sans-serif;font-size:0.85rem;font-weight:300;color:#444;display:flex;gap:12px;"><span style="color:#d90429;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.72rem;min-width:20px;">V</span>Inspire civilizational optimism</li>
+            <li style="font-family:'Barlow',sans-serif;font-size:0.85rem;font-weight:300;color:#444;display:flex;gap:12px;"><span style="color:#d90429;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.72rem;min-width:20px;">VI</span>Catalyze the Convergence Economy</li>
+            <li style="font-family:'Barlow',sans-serif;font-size:0.85rem;font-weight:300;color:#444;display:flex;gap:12px;"><span style="color:#d90429;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.72rem;min-width:20px;">VII</span>Channel competitive impulses away from conflict</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COMPETITORS ── -->
+<section id="competitors">
+  <div class="container">
+    <span class="section-label reveal">02 — The Competitors</span>
+    <h2 class="section-title reveal reveal-delay-1">Three Forms of Intelligence.<br><em>One Arena.</em></h2>
+
+    <div class="competitors-grid">
+      <!-- Human -->
+      <div class="competitor-card human reveal reveal-delay-1">
+        <div class="competitor-number">01</div>
+        <svg class="competitor-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="14" r="8" stroke="#023e8a" stroke-width="2" fill="none"/>
+          <path d="M8 44 C8 33 40 33 40 44" stroke="#023e8a" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div class="competitor-type">Carbon Intelligence</div>
+        <h3 class="competitor-name">Human<br>Athlete</h3>
+        <p class="competitor-desc">Athletes, strategists, and creators bringing biological intuition, embodied wisdom, and the irreducible spark of human creativity to every challenge — the original intelligence, now in new arenas.</p>
+      </div>
+
+      <!-- AI -->
+      <div class="competitor-card ai reveal reveal-delay-2">
+        <div class="competitor-number">02</div>
+        <svg class="competitor-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="8" y="12" width="32" height="24" rx="2" stroke="#d90429" stroke-width="2" fill="none"/>
+          <circle cx="18" cy="24" r="3" fill="#d90429"/>
+          <circle cx="30" cy="24" r="3" fill="#d90429"/>
+          <path d="M18 8 L18 12 M30 8 L30 12" stroke="#d90429" stroke-width="2" stroke-linecap="round"/>
+          <path d="M8 36 L18 42 L30 42 L40 36" stroke="#d90429" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="competitor-type">Silicon Intelligence</div>
+        <h3 class="competitor-name">Artificial<br>Intelligence</h3>
+        <p class="competitor-desc">AI systems from open-source makers to frontier labs, competing under certified, auditable conditions — not as black-box oracles, but as transparent participants bound by the same Agon standards as all others.</p>
+      </div>
+
+      <!-- Robot -->
+      <div class="competitor-card robot reveal reveal-delay-3">
+        <div class="competitor-number">03</div>
+        <svg class="competitor-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="14" y="6" width="20" height="14" rx="2" stroke="#222" stroke-width="2" fill="none"/>
+          <rect x="10" y="20" width="28" height="18" rx="2" stroke="#222" stroke-width="2" fill="none"/>
+          <path d="M4 24 L10 24 M38 24 L44 24" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+          <path d="M16 38 L16 44 M32 38 L32 44" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="24" cy="13" r="2" fill="#222"/>
+        </svg>
+        <div class="competitor-type">Embodied Intelligence</div>
+        <h3 class="competitor-name">Autonomous<br>Robot</h3>
+        <p class="competitor-desc">Embodied robotic systems that sense, move, and act in the physical world — competing under the same fairness architecture, with certified firmware, standardized actuators, and full audit trails.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GAMES ── -->
+<section id="games">
+  <div class="container">
+    <div class="games-header">
+      <div>
+        <span class="section-label reveal">03 — Game Design</span>
+        <h2 class="section-title reveal reveal-delay-1">Twelve Original Games.<br><em>Designed for All Minds.</em></h2>
+      </div>
+      <p class="section-body reveal reveal-delay-2" style="max-width:340px;font-size:0.92rem;">
+        Each game operates under the <strong>$500 Barrier Rule</strong> — every participation path costs $500 or less, via open-source Agon Kits and standardized hardware rentals. Accessibility is a design constraint.
+      </p>
+    </div>
+
+    <div class="games-grid reveal">
+      <div class="game-tile">
+        <div class="game-num">01</div>
+        <div class="game-cat">Arena Race</div>
+        <div class="game-title">The Labyrinth Sprint</div>
+        <div class="game-desc">Dynamic maze navigation under time pressure — raw speed meets adaptive pathfinding.</div>
+      </div>
+      <div class="game-tile">
+        <div class="game-num">02</div>
+        <div class="game-cat">Skill Craft</div>
+        <div class="game-title">Precision Assembly</div>
+        <div class="game-desc">Micro-tolerance construction under load — dexterity, planning, and composure.</div>
+      </div>
+      <div class="game-tile">
+        <div class="game-num">03</div>
+        <div class="game-cat">Cognition</div>
+        <div class="game-title">The Noisy Oracle</div>
+        <div class="game-desc">Reasoning under adversarial noise — signal extraction, inference, decision under uncertainty.</div>
+      </div>
+      <div class="game-tile">
+        <div class="game-num">04</div>
+        <div class="game-cat">Team Governance</div>
+        <div class="game-title">The Accord</div>
+        <div class="game-desc">Multi-party negotiation — reaching binding agreements within strict time and resource constraints.</div>
+      </div>
+      <div class="game-tile">
+        <div class="game-num">05</div>
+        <div class="game-cat">Creative Challenge</div>
+        <div class="game-title">Synthesis Duel</div>
+        <div class="game-desc">Real-time creative composition judged by cross-intelligence jury on novelty and coherence.</div>
+      </div>
+      <div class="game-tile">
+        <div class="game-num">06</div>
+        <div class="game-cat">Arena Race</div>
+        <div class="game-title">The Pursuit</div>
+        <div class="game-desc">Pursuit-evasion in a dynamic arena — predator-prey logic meets physical endurance.</div>
+      </div>
+      <div class="game-tile">
+        <div class="game-num">07</div>
+        <div class="game-cat">Cognition</div>
+        <div class="game-title">Ethical Arbitration</div>
+        <div class="game-desc">Real-time dilemma resolution — judges score reasoning quality and value coherence.</div>
+      </div>
+      <div class="game-tile">
+        <div class="game-num">08</div>
+        <div class="game-cat">Skill Craft</div>
+        <div class="game-title">The Cartographer</div>
+        <div class="game-desc">Mapping unknown terrain in real-time — exploration strategy meets spatial intelligence.</div>
+      </div>
+      <div class="game-tile">
+        <div class="game-num">09</div>
+        <div class="game-cat">Team Governance</div>
+        <div class="game-title">Search & Rescue</div>
+        <div class="game-desc">Coordinated multi-agent rescue in degraded environments — cooperation under time pressure.</div>
+      </div>
+      <div class="game-tile">
+        <div class="game-num">10</div>
+        <div class="game-cat">Creative Challenge</div>
+        <div class="game-title">The Living Score</div>
+        <div class="game-desc">Adaptive real-time musical composition — audience response shapes the competitive score.</div>
+      </div>
+      <div class="game-tile">
+        <div class="game-num">11</div>
+        <div class="game-cat">Cognition</div>
+        <div class="game-title">The Memory Palace</div>
+        <div class="game-desc">Rapid encoding and retrieval under sensory disruption — architecture of working memory.</div>
+      </div>
+      <div class="game-tile">
+        <div class="game-num">12</div>
+        <div class="game-cat">Arena Race</div>
+        <div class="game-title">Convergence Grand Prix</div>
+        <div class="game-desc">The closing spectacle — hybrid team relay spanning all twelve disciplines. The ultimate test.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAIRNESS SYSTEM ── -->
+<section id="fairness">
+  <div class="container">
+    <span class="section-label reveal">04 — The Architecture</span>
+    <h2 class="section-title reveal reveal-delay-1">The Tri-Modal<br><em>Fairness System</em></h2>
+    <p class="section-body reveal reveal-delay-2">
+      Every Agon game operates under a standardized architecture ensuring parity across carbon-based, silicon-based, and embodied intelligences — while maintaining spectator engagement and logistical accessibility. No competitor has a structural interface advantage.
+    </p>
+
+    <div class="fairness-pillars">
+      <div class="pillar reveal reveal-delay-1">
+        <div class="pillar-letter">SCE</div>
+        <div class="pillar-name">Component I</div>
+        <h3 class="pillar-title">Standardized Capability Envelope</h3>
+        <p class="pillar-body">Explicit limits on time, compute budget, energy consumption, sensor resolution, actuation force, and inference latency — creating a level capability ceiling for all competitors.</p>
+      </div>
+      <div class="pillar reveal reveal-delay-2">
+        <div class="pillar-letter">UIL</div>
+        <div class="pillar-name">Component II</div>
+        <h3 class="pillar-title">Unified Interface Layer</h3>
+        <p class="pillar-body">All competitors access each game through a standardized interface. Humans use physical or controller input; AIs use identical API spaces; robots use certified firmware implementing identical constraints.</p>
+      </div>
+      <div class="pillar reveal reveal-delay-3">
+        <div class="pillar-letter">ESA</div>
+        <div class="pillar-name">Component III</div>
+        <h3 class="pillar-title">Equivalence Scoring &amp; Audit</h3>
+        <p class="pillar-body">Real-time scoring on objective metrics; tamper-evident cryptographic logs; post-event independent audits; mandatory model cards and run hashes for all silicon entries.</p>
+      </div>
+    </div>
+
+    <!-- Signature Moments -->
+    <div style="margin-top:2px;display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(255,255,255,0.05);" class="reveal">
+      <div style="background:#0a0a0a;padding:36px 28px;border-top:1px solid rgba(255,255,255,0.06);">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#d90429;margin-bottom:12px;">Opening Ritual</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;color:white;line-height:1.3;">The Multi-Being Pledge</div>
+      </div>
+      <div style="background:#0a0a0a;padding:36px 28px;border-top:1px solid rgba(255,255,255,0.06);">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#d90429;margin-bottom:12px;">Special Award</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;color:white;line-height:1.3;">The Ethics Medal</div>
+      </div>
+      <div style="background:#0a0a0a;padding:36px 28px;border-top:1px solid rgba(255,255,255,0.06);">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#d90429;margin-bottom:12px;">Ceremonial</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;color:white;line-height:1.3;">The Convergence Torch</div>
+      </div>
+      <div style="background:#0a0a0a;padding:36px 28px;border-top:1px solid rgba(255,255,255,0.06);">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#d90429;margin-bottom:12px;">Live Dashboard</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;color:white;line-height:1.3;">The Harmony Index</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── IMPACT ── -->
+<section id="impact">
+  <div class="container">
+    <div class="impact-layout">
+      <div>
+        <span class="section-label reveal">05 — Impact & Scale</span>
+        <h2 class="section-title reveal reveal-delay-1">A Civilizational<br><em>Institution</em></h2>
+        <p class="section-body reveal reveal-delay-2">
+          Total addressable market at the intersection of global sports media, esports, AI benchmarking, and live entertainment exceeds USD 120 billion. The Agon is not competing in an existing market — it is creating the market.
+        </p>
+
+        <div class="stats-row">
+          <div class="stat-item reveal reveal-delay-1">
+            <div class="stat-value">250<span>M</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat-label">Cumulative viewers<br>by Year 5 (2031)</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-2">
+            <div class="stat-value">$520<span>M</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat-label">Revenue projection<br>by Year 10</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-3">
+            <div class="stat-value">200<span>+</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat-label">AI systems certified<br>through Agon Verified</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-4">
+            <div class="stat-value">$120<span>B</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat-label">Total addressable<br>market intersection</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="impact-milestones">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:300;font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:#888;display:block;margin-bottom:16px;">Roadmap to 2036</span>
+
+          <div class="milestone reveal">
+            <div class="milestone-year">2026</div>
+            <div class="milestone-text">Foundation established. Pilot Finals in Year 1. Open Qualifier Weeks launch. Anchor sponsors secured.</div>
+          </div>
+          <div class="milestone reveal reveal-delay-1">
+            <div class="milestone-year">2027</div>
+            <div class="milestone-text">First Biennial World Finals. 4M+ viewers. Operational break-even trajectory. Global media deal signed.</div>
+          </div>
+          <div class="milestone reveal reveal-delay-2">
+            <div class="milestone-year">2028</div>
+            <div class="milestone-text">Recognition in 50+ nations. Agon Verified benchmark adopted. Year-round league content engine active.</div>
+          </div>
+          <div class="milestone reveal reveal-delay-3">
+            <div class="milestone-year">2029</div>
+            <div class="milestone-text">100M+ viewers. Agon Hubs in major cities. $240M revenue milestone. 1M youth through Agon Academy.</div>
+          </div>
+          <div class="milestone reveal reveal-delay-4">
+            <div class="milestone-year">2031</div>
+            <div class="milestone-text">250M cumulative viewers. Recognition in 100+ nations. $500M Convergence Economy spin-off innovation.</div>
+          </div>
+          <div class="milestone reveal">
+            <div class="milestone-year">2036</div>
+            <div class="milestone-text">750M+ cumulative viewers. Franchise status rivaling Olympic properties. $75M+ endowment. Governance model adopted globally.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BRAND PILLARS ── -->
+<section id="brand">
+  <div class="container">
+    <span class="section-label reveal">06 — Brand Pillars</span>
+    <h2 class="section-title reveal reveal-delay-1">The Values That<br><em>Govern the Agon</em></h2>
+
+    <div class="brand-grid reveal" style="margin-top:48px;">
+      <div class="brand-pillar">
+        <span class="bp-icon">○</span>
+        <span class="bp-word">Optimism</span>
+      </div>
+      <div class="brand-pillar">
+        <span class="bp-icon">◇</span>
+        <span class="bp-word">Safety</span>
+      </div>
+      <div class="brand-pillar">
+        <span class="bp-icon">△</span>
+        <span class="bp-word">Fairness</span>
+      </div>
+      <div class="brand-pillar">
+        <span class="bp-icon">✦</span>
+        <span class="bp-word">Excellence</span>
+      </div>
+      <div class="brand-pillar">
+        <span class="bp-icon">◯</span>
+        <span class="bp-word">Dignity</span>
+      </div>
+      <div class="brand-pillar">
+        <span class="bp-icon">∞</span>
+        <span class="bp-word">Sustainability</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GOVERNANCE ── -->
+<section id="governance">
+  <div class="container">
+    <span class="section-label reveal">07 — Governance</span>
+    <h2 class="section-title reveal reveal-delay-1">Corruption-Resistant.<br><em>Built for Centuries.</em></h2>
+    <p class="section-body reveal reveal-delay-2" style="margin-bottom:56px;">
+      The Agon's dual-entity architecture provides optimal risk/return separation and a defensibility profile very few institutions achieve. The strongest mitigation against existential risk is legitimacy — earned through transparent standards and independent oversight.
+    </p>
+
+    <div class="gov-layout">
+      <div class="entity-card foundation reveal reveal-delay-1">
+        <div class="entity-type">Non-Profit Entity</div>
+        <h3 class="entity-name">Convergence Agon<br>Foundation</h3>
+        <p class="entity-body">Owns the Charter, rule principles, brand stewardship, and the mission of multi-being harmony. Controls certification standards and ethics mandates. Eligible for tax-advantaged grants and philanthropic capital.</p>
+        <ul class="entity-list">
+          <li>Agon Charter & rule principles</li>
+          <li>Brand stewardship & mission protection</li>
+          <li>Certification standards authority</li>
+          <li>Ethics mandates & safety protocols</li>
+          <li>Grant & philanthropic capital eligible</li>
+        </ul>
+      </div>
+
+      <div class="entity-card operating reveal reveal-delay-2">
+        <div class="entity-type">Public Benefit Corporation</div>
+        <h3 class="entity-name">Agon Operating<br>Company</h3>
+        <p class="entity-body">Executes events, media production, commercial partnerships, and licensing — under a long-term license from the Foundation, renewable only with full compliance. Generates equity-bearing returns for investors.</p>
+        <ul class="entity-list">
+          <li>Event execution & production</li>
+          <li>Media rights & streaming</li>
+          <li>Commercial partnerships & licensing</li>
+          <li>Agon League year-round operations</li>
+          <li>Investor equity & commercial returns</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Corruption resistance -->
+    <div style="margin-top:2px;background:var(--light-grey);padding:48px;" class="reveal">
+      <span style="font-family:'Barlow Condensed',sans-serif;font-weight:300;font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:#888;display:block;margin-bottom:24px;">Corruption Resistance Mechanisms</span>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;">
+        <div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;margin-bottom:8px;">Annual Audits</div>
+          <div style="font-family:'Barlow',sans-serif;font-weight:300;font-size:0.85rem;color:#666;line-height:1.6;">Independent financial & scoring integrity audits — both published in full transparency.</div>
+        </div>
+        <div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;margin-bottom:8px;">Cryptographic Sealing</div>
+          <div style="font-family:'Barlow',sans-serif;font-weight:300;font-size:0.85rem;color:#666;line-height:1.6;">AI model weights sealed 48 hours pre-event. Tamper-evident audit trails with forfeit-and-ban penalties.</div>
+        </div>
+        <div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:#0a0a0a;margin-bottom:8px;">Whistleblower Program</div>
+          <div style="font-family:'Barlow',sans-serif;font-weight:300;font-size:0.85rem;color:#666;line-height:1.6;">Third-party intake with formal non-retaliation protections. Public transparency dashboard.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINANCIAL ── -->
+<section id="financial">
+  <div class="container">
+    <span class="section-label reveal">08 — The Opportunity</span>
+    <h2 class="section-title reveal reveal-delay-1">Investment-Ready.<br><em>Category Creation.</em></h2>
+    <p class="section-body reveal reveal-delay-2" style="color:rgba(255,255,255,0.5);margin-bottom:60px;">
+      The Agon is not competing in an existing market — it is creating the market. First-mover advantage in a genuinely novel category compounds exponentially as the AI and robotics industry grows.
+    </p>
+
+    <!-- Revenue projections bars -->
+    <div class="fin-bars reveal" id="fin-bars">
+      <div class="fin-bar-row">
+        <div class="fin-bar-label">Y1</div>
+        <div class="fin-bar-track"><div class="fin-bar-fill" style="--target-w:8%;"></div></div>
+        <div class="fin-bar-value">$18M</div>
+      </div>
+      <div class="fin-bar-row">
+        <div class="fin-bar-label">Y2</div>
+        <div class="fin-bar-track"><div class="fin-bar-fill" style="--target-w:20%;"></div></div>
+        <div class="fin-bar-value">$48M</div>
+      </div>
+      <div class="fin-bar-row">
+        <div class="fin-bar-label">Y3</div>
+        <div class="fin-bar-track"><div class="fin-bar-fill" style="--target-w:38%;"></div></div>
+        <div class="fin-bar-value">$92M</div>
+      </div>
+      <div class="fin-bar-row">
+        <div class="fin-bar-label">Y4</div>
+        <div class="fin-bar-track"><div class="fin-bar-fill" style="--target-w:58%;"></div></div>
+        <div class="fin-bar-value">$140M</div>
+      </div>
+      <div class="fin-bar-row">
+        <div class="fin-bar-label">Y5</div>
+        <div class="fin-bar-track"><div class="fin-bar-fill" style="--target-w:100%;"></div></div>
+        <div class="fin-bar-value">$240M</div>
+      </div>
+    </div>
+
+    <div class="fin-highlight reveal">
+      <div class="fin-block">
+        <div class="fin-big">$120<span>B</span></div>
+        <div class="fin-desc">Total addressable market at the intersection of sports media, esports, AI benchmarking &amp; live entertainment</div>
+      </div>
+      <div class="fin-block">
+        <div class="fin-big">45<span>%</span> → 40<span>%</span></div>
+        <div class="fin-desc">Revenue mix evolution: early sponsorship-heavy, later media rights &amp; licensing growth dominate</div>
+      </div>
+      <div class="fin-block">
+        <div class="fin-big">Y3</div>
+        <div class="fin-desc">Operational break-even target — the revenue inflection point of the first biennial World Finals</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section id="cta">
+  <div class="container" style="text-align:center;">
+    <!-- Floating infinity -->
+    <svg class="cta-infinity reveal" viewBox="0 0 120 65" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M60 32.5 C60 32.5 47 8 32 8 C16 8 4 19 4 32.5 C4 46 16 57 32 57 C47 57 60 32.5 60 32.5 C60 32.5 73 8 88 8 C104 8 116 19 116 32.5 C116 46 104 57 88 57 C73 57 60 32.5 60 32.5 Z"
+        stroke="#0a0a0a" stroke-width="5" fill="none" stroke-linecap="round">
+        <animate attributeName="stroke" values="#0a0a0a;#d90429;#023e8a;#0a0a0a" dur="6s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="60" cy="32.5" r="3.5" fill="#d90429">
+        <animate attributeName="r" values="3.5;6;3.5" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+
+    <h2 class="cta-headline reveal reveal-delay-1">
+      The Intelligence Age<br>Needs Its <em>Arena</em>
+    </h2>
+    <p class="cta-sub reveal reveal-delay-2">
+      Whether you are an athlete, an AI developer, a robotics builder, an investor, or a citizen of the future — the Agon is where you belong.
+    </p>
+
+    <div class="cta-buttons reveal reveal-delay-3">
+      <a href="mailto:founders@convergenceagon.org" class="btn-primary">Express Interest</a>
+      <a href="mailto:investors@convergenceagon.org" class="btn-secondary">Investor Inquiries</a>
+    </div>
+
+    <p class="cta-domain reveal reveal-delay-4">convergenceagon.org · est. mmxxvi</p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo">
+    <svg width="32" height="18" viewBox="0 0 72 40" fill="none" aria-hidden="true">
+      <path d="M36 20 C36 20 28 6 16 6 C8 6 2 12 2 20 C2 28 8 34 16 34 C28 34 36 20 36 20 Z" stroke="rgba(255,255,255,0.5)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <path d="M36 20 C36 20 44 6 56 6 C64 6 70 12 70 20 C70 28 64 34 56 34 C44 34 36 20 36 20 Z" stroke="#d90429" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    </svg>
+    <span class="footer-wordmark"><strong>Convergence</strong> Agon</span>
+  </div>
+
+  <ul class="footer-links">
+    <li><a href="#what">Vision</a></li>
+    <li><a href="#games">Games</a></li>
+    <li><a href="#governance">Governance</a></li>
+    <li><a href="#financial">Invest</a></li>
+    <li><a href="mailto:founders@convergenceagon.org">Contact</a></li>
+  </ul>
+
+  <p class="footer-copy">© 2026 Convergence Agon Foundation &amp; Operating Company. All rights reserved.<br>ConvergenceAgon.org · For investor &amp; strategic partner review.</p>
+</footer>
+
+<script>
+  // ── NAVIGATION SCROLL STATE
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // ── SCROLL REVEAL OBSERVER
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // ── FINANCIAL BAR ANIMATION
+  const finBars = document.getElementById('fin-bars');
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.fin-bar-fill').forEach((bar, i) => {
+          setTimeout(() => bar.classList.add('animated'), i * 150);
+        });
+        barObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  if (finBars) barObserver.observe(finBars);
+
+  // ── SMOOTH ANCHOR SCROLLING
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
